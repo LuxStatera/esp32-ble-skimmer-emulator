@@ -1,6 +1,6 @@
 # ESP32 BLE Card Skimmer Emulator
 
-A simple BLE advertising tool for the ESP32 WROOM-32 that broadcasts known card skimmer device names over Bluetooth Low Energy. Built to test BLE skimmer detectors like [VordC5](https://github.com/PierreGode/VordC5) and VordS3 without needing an actual skimmer module.
+A simple BLE advertising tool for the ESP32 WROOM-32 that broadcasts known card skimmer device names over Bluetooth Low Energy. Built to test BLE skimmer detectors like [VordC5](https://github.com/PierreGode/VordC5) without needing an actual skimmer module.
 
 Place the emulator on a desk, connect your skimmer detector to a powerbank, and walk toward it to verify proximity alerts, screen flashing, and LED color sweeps are all working correctly.
 
@@ -23,7 +23,7 @@ Each press of the Cycle button steps through this list:
 HC-05  ->  HC-06  ->  HC-08  ->  BT05  ->  JDY-31  ->  HM-10  ->  CC41A  ->  SPP-CA
 ```
 
-These names are pulled from the VordC5/VordS3 skimmer detection list. Any BLE scanner that flags these names will trigger when this emulator is in range.
+These names are pulled from the VordC5 skimmer detection list. Any BLE scanner that flags these names will trigger when this emulator is in range.
 
 ## Hardware
 
@@ -161,7 +161,3 @@ static const char* NAMES[] = {
 - The ESP32's MAC address stays the same when you cycle names. Detectors that count unique devices by MAC will only count this as 1 skimmer regardless of name changes.
 - BLE advertising range is typically 10-30 meters depending on environment, making it easy to test proximity-based alerts by walking closer or farther from the emulator.
 - The blue LED on GPIO 2 is the onboard LED found on most ESP32 dev boards. If yours is on a different pin, change `#define LED 2` in the source.
-
-## License
-
-MIT
