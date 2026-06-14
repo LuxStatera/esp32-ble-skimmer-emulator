@@ -161,3 +161,7 @@ static const char* NAMES[] = {
 - The ESP32's MAC address stays the same when you cycle names. Detectors that count unique devices by MAC will only count this as 1 skimmer regardless of name changes.
 - BLE advertising range is typically 10-30 meters depending on environment, making it easy to test proximity-based alerts by walking closer or farther from the emulator.
 - The blue LED on GPIO 2 is the onboard LED found on most ESP32 dev boards. If yours is on a different pin, change `#define LED 2` in the source.
+
+## Credits
+
+This firmware and documentation were written by [Claude](https://claude.ai), Anthropic's AI assistant, via [Claude Code](https://claude.com/claude-code).
