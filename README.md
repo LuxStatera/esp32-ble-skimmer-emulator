@@ -1,6 +1,6 @@
 # ESP32 BLE Card Skimmer Emulator
 
-A simple BLE advertising tool for the ESP32 WROOM-32 that broadcasts known card skimmer device names over Bluetooth Low Energy. Built to test BLE skimmer detectors like [VordC5](https://github.com/PierreGode/VordC5) without needing an actual skimmer module.
+A simple BLE advertising tool for the ESP32 WROOM-32 that broadcasts known card skimmer device names over Bluetooth Low Energy. Built to test BLE skimmer detectors without needing an actual skimmer module.
 
 Place the emulator on a desk, connect your skimmer detector to a powerbank, and walk toward it to verify proximity alerts, screen flashing, and LED color sweeps are all working correctly.
 
@@ -23,7 +23,7 @@ Each press of the Cycle button steps through this list:
 HC-05  ->  HC-06  ->  HC-08  ->  BT05  ->  JDY-31  ->  HM-10  ->  CC41A  ->  SPP-CA
 ```
 
-These names are pulled from the VordC5 skimmer detection list. Any BLE scanner that flags these names will trigger when this emulator is in range.
+These are common Bluetooth module names associated with card skimmers. Any BLE skimmer detector that flags these names will trigger when this emulator is in range.
 
 ## Hardware
 
